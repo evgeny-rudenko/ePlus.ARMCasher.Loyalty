@@ -1,0 +1,772 @@
+<?xml version="1.0"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <ProjectGuid>{B3050AA5-D0F0-452D-931B-0EC49AD3E147}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <AssemblyName>ePlus.ARMCasher.Loyalty</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ePlus.ARMBusinessLogic">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.ARMBusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="ePlus.CommonEx">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.CommonEx.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Loyalty">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Interfaces">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.ARMCommon">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.ARMCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System" />
+    <Reference Include="ePlus.MetaData">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.MetaData.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Loyalty.AstraZeneca">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.AstraZeneca.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Loyalty.Domestic">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.Domestic.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.wscardax">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\Interop.wscardax.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Loyalty.GoldenMiddle">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.GoldenMiddle.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="ePlus.Loyalty.Mindbox">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.Mindbox.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Loyalty.Olextra">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.Olextra.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.BELLib">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\Interop.BELLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.LSPoint">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.LSPoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.winpcxLib">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\Interop.winpcxLib.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Loyalty.PharmacyWallet">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.PharmacyWallet.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="ePlus.DiscountMobile">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.DiscountMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Discount2">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Discount2.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Loyalty.SailPlay">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.SailPlay.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Loyalty.RapidSoft">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.RapidSoft.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Loyalty.Sber">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.Sber.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="ePlus.Loyalty.SailPlay.Wpf">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Loyalty.SailPlay.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.ARMUtils">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.ARMUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="ePlus.ARMCacheManager">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.ARMCacheManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="Dapper.StrongName">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\Dapper.StrongName.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ePlus.KKMWrapper">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.KKMWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="ePlus.Dictionary.BusinessObjects">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Dictionary.BusinessObjects.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.ARMSecurity">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.ARMSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="ePlus.Kiz.Extensions">
+      <HintPath>.\ePlus.ARMCasher.LoyaltyReferences\ePlus.Kiz.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="AssemblyDateAttribute.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Database\RapidCheque.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\AstraZeneca\AllowedBarcode.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Database\RapidChequeDatabase.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\BaseLoyaltyProgramEx.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\DiscountMobileCard.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\AstraZeneca\AstraZenecaLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\AstraZeneca\AstraZenecaLoyaltyProgramRigla.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\AstraZeneca\AzTransactionsBl.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\DiscountMobileLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasherNew.Controls\ARMPCXBarcodeTextBox.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ARMPCXBarcodeTextBox.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Cotrols\ucBallance.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ucBallance.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\TextSetter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Cotrols\ucDebit.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>ucDebit.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\CustomerCardInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\CardReader.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Domestic\DomesticLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LoyaltyProgManager.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LoyaltyProgramDebitArgs.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCX\PCXUtils.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\PointRequest.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\RequestBase.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\GetBalanceRequest.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\RefundByChequeRequest.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\RefundRequest.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\RollbackRequest.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\FindTransactionsRequest.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\ApplyDiscountRequest.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\Cheque.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\AdditionalField.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\ChequeItem.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\AdditionalFieldType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\ChequeRefundInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LpTransactionData.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\ChequeRefundInfoFull.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\GoldenMiddle\GMTransactionData.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\ChequeItemRefundInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\ApplyDiscountResponse.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\ChequeDiscountInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\ChequeItemDiscountInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\GetBalanceResponse.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\RefundByChequeResponse.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\RefundResponse.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\RollbackResponse.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\FindTransactionsResponse.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RapidSoft.Loyalty.PosConnector\Transaction.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PosConnector.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PosConnectorChannel.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PosConnectorClient.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\RapidSoft\RapidSoftHelper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\RapidSoft\OperationStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\RapidSoft\RollbackStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\RapidSoft\CardStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\GoldenMiddle\GoldenMiddleLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\GoldenMiddle\GoldenMiddle_Bl.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LoyaltyException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\SmsAuthenticationFailedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LoyaltyCardIsBlockedException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LoyaltyLogger.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LoyaltyOperType.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LoyaltyRollbackException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LoyaltyTransaction.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\RapidSoft\RapidSoftLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LpTransResultBase.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LpTransResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PcxLpTransResult.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Mindbox\MindboxCard.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Mindbox\DiscountPromocode.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Mindbox\ILoyaltyFactory.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Mindbox\MindboxLoyaltyFactory.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCX\SberbankLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Mindbox\MindboxLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\SailPlay\SailPlayLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\SailPlay\SailPlay_Bl.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Mindbox\MindboxRecommendation.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Olextra\AllowedBarcode.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\SailPlay\UserRegisterPresenter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobileUserItem.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobileCouponList.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobileCouponItem.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobileUserList.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobileUserResponse.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobilePurchase.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobilePosTokenStatus.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobilePurchaseResponse.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobilePurchaseListInner.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobilePurchaseItemList.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobilePurchaseItem.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobilePurchaseList.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\ThresholdsList.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Xml\DiscountMobileLoyalty.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Olextra\OlextraLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Olextra\OlextraTransactionsBl.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCX\ErrorMessage.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\IFrmLoyality.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\IBallanceView.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\ErrorInterpreter.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCX\SvyaznoyLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Properties\Resources.Designer.cs">
+      <AutoGen>true</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTimeSharedInput>true</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\GoodsInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\LSPointCard.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\LSPointLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\Utils.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\NonCriticalInitializationException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCXDiscount2Card.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCX\PCXInternalException.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCX\PCXLoyaltyProgramEx.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCX\PCXTransactionData.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCX\PharmacyWalletLoyaltyProgram.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\RapidSoft\Forms\EnterCardInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\AstraZeneca\Forms\FormConfirmationCode.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\AstraZeneca\Forms\FormAccountInfo.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\DiscountMobile.Forms\FrmAddPaymentDiscountMobile.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\DiscountMobile.Forms\FrmDiscountMobileAskCoupons.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\FrmWaiting.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\FrmConfirmationCode.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\FrmBalanceDetails.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\FrmScanBarcode.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\FrmScanBarcodeEx.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\SailPlay\FormSailPlayUserRegister.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Mindbox\SmsAuthenticationForm.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\FrmDebit.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\FrmLoyalitySelect.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\Forms\FrmBallance.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms.Bel.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms\DialogCheque.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms\DialogPerfOper.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms\DialogRollback.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms\EnterCardInfoForm.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ePlus.ARMCasher.Loyalty\PCX\Forms\FrmAddPCXPayment.cs">
+      <AutoGen>false</AutoGen>
+      <DesignTimeSharedInput>false</DesignTimeSharedInput>
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\RapidSoft\Forms\EnterCardInfo.resx">
+      <DependentUpon>EnterCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\AstraZeneca\Forms\FormConfirmationCode.resx">
+      <DependentUpon>FormConfirmationCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\AstraZeneca\Forms\FormAccountInfo.resx">
+      <DependentUpon>FormAccountInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\DiscountMobile.Forms\FrmAddPaymentDiscountMobile.resx">
+      <DependentUpon>FrmAddPaymentDiscountMobile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\DiscountMobile.Forms\FrmDiscountMobileAskCoupons.resx">
+      <DependentUpon>FrmDiscountMobileAskCoupons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Forms\FrmWaiting.resx">
+      <DependentUpon>FrmWaiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Forms\FrmConfirmationCode.resx">
+      <DependentUpon>FrmConfirmationCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Forms\FrmBalanceDetails.resx">
+      <DependentUpon>FrmBalanceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Forms\FrmScanBarcode.resx">
+      <DependentUpon>FrmScanBarcode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Forms\FrmScanBarcodeEx.resx">
+      <DependentUpon>FrmScanBarcodeEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\SailPlay\FormSailPlayUserRegister.resx">
+      <DependentUpon>FormSailPlayUserRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Mindbox\SmsAuthenticationForm.resx">
+      <DependentUpon>SmsAuthenticationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Forms\FrmDebit.resx">
+      <DependentUpon>FrmDebit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Forms\FrmLoyalitySelect.resx">
+      <DependentUpon>FrmLoyalitySelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Forms\FrmBallance.resx">
+      <DependentUpon>FrmBallance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms.Bel.resx">
+      <DependentUpon>Forms.Bel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms\DialogCheque.resx">
+      <DependentUpon>DialogCheque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms\DialogPerfOper.resx">
+      <DependentUpon>DialogPerfOper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms\DialogRollback.resx">
+      <DependentUpon>DialogRollback.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\LSPoint\Forms\EnterCardInfoForm.resx">
+      <DependentUpon>EnterCardInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\PCX\Forms\FrmAddPCXPayment.resx">
+      <DependentUpon>FrmAddPCXPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasherNew.Controls\ARMPCXBarcodeTextBox.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ARMPCXBarcodeTextBox.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Cotrols\ucBallance.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ucBallance.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Cotrols\ucDebit.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ucDebit.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ePlus.ARMCasher.Loyalty\Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
